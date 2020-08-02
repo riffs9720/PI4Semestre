@@ -1,0 +1,106 @@
+body {
+  font-family: Arial;
+
+
+}
+
+      /*flexbox criar um container na pagina totalmente personalizavel */
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.col-25 {
+  -ms-flex: 25%;
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 500%;
+  flex: 500%;
+}
+
+.col-75 {
+  -ms-flex: 75%;
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 5px 20px 15px 20px;
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn1 {
+  background-color: #FFBF00;
+  color: black;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.btn1:hover {
+  background-color: #23238E;
+  color: #FFBF00;
+
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Layout responsivo - quando a tela tiver menos de 800 pixels de largura, faça as duas colunas empilharem umas sobre as outras em vez de ficarem próximas umas das outras (também mude a direção - faça a coluna "carrinho" ficar no topo) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;/* Essa opçao direciona de onde começa os textos no container usando o flexbox*/
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
